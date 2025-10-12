@@ -21,6 +21,7 @@
   },
   "dependencies": {
     "@nestjs/common": "^11.0.1",
+<<<<<<< HEAD
     "@nestjs/config": "^4.0.2",
     "@nestjs/core": "^11.0.1",
     "@nestjs/jwt": "^11.0.1",
@@ -34,6 +35,14 @@
     "mongoose": "^8.19.0",
     "nest-winston": "^1.10.2",
     "passport-jwt": "^4.0.1",
+=======
+    "@nestjs/core": "^11.0.1",
+    "@nestjs/mongoose": "^11.0.3",
+    "@nestjs/platform-express": "^11.0.1",
+    "@nestjs/swagger": "^11.2.0",
+    "mongoose": "^8.19.0",
+    "nest-winston": "^1.10.2",
+>>>>>>> ebaec0106408cc835bc0f55d690ab4b7c38b0f6e
     "reflect-metadata": "^0.2.2",
     "rxjs": "^7.8.1",
     "swagger-ui-express": "^5.0.1",
@@ -45,7 +54,10 @@
     "@nestjs/cli": "^11.0.0",
     "@nestjs/schematics": "^11.0.0",
     "@nestjs/testing": "^11.0.1",
+<<<<<<< HEAD
     "@types/bcryptjs": "^2.4.6",
+=======
+>>>>>>> ebaec0106408cc835bc0f55d690ab4b7c38b0f6e
     "@types/express": "^5.0.0",
     "@types/jest": "^30.0.0",
     "@types/node": "^22.10.7",
