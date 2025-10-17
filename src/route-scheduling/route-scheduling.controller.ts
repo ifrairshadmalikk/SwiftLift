@@ -5,7 +5,7 @@ import { CreateRouteDto } from './dto/create-route.dto';
 import { UpdateRouteDto } from './dto/update-route.dto';
 
 @ApiTags('Route Scheduling')
-@Controller('v1/routes')
+@Controller('/routes')
 export class RouteSchedulingController {
   constructor(private readonly routeService: RouteSchedulingService) {}
 

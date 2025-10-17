@@ -10,6 +10,7 @@ import { TransporterModule } from './transporter/transporter.module';
 import { RouteSchedulingModule } from './route-scheduling/route-scheduling.module'; // 👈 Added import
 import { BookingModule } from './booking/booking.module';
 import { LiveTrackingModule } from './live-tracking/live-tracking/live-tracking.module';
+import { PaymentModule } from './payment/payment.module';
 
 @Module({
   imports: [
@@ -26,6 +27,7 @@ import { LiveTrackingModule } from './live-tracking/live-tracking/live-tracking.
     AuthModule,
     BookingModule,
     LiveTrackingModule,
+    PaymentModule,
 
   ],
 })

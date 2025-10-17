@@ -5,7 +5,7 @@ import { CreateBookingDto } from './dto/create-booking.dto';
 import { UpdateBookingDto } from './dto/update-booking.dto';
 
 @ApiTags('Bookings')
-@Controller('v1/bookings')
+@Controller('/bookings')
 export class BookingController {
   constructor(private readonly bookingService: BookingService) {}
 
