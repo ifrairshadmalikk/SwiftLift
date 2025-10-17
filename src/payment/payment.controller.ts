@@ -1,27 +1,35 @@
-import { Controller, Post, Body, Get, Param } from '@nestjs/common';
+import { Controller, Post, Body } from '@nestjs/common';
 import { PaymentService } from './payment.service';
+import { ApiTags, ApiOperation } from '@nestjs/swagger';
+import { CreateSubscriptionDto } from './dto/create-subscription.dto';
+import { WalletTransactionDto } from './dto/wallet-transaction.dto';
 
-@Controller('payments')
+@ApiTags('Payments')
+@Controller('/payments')
 export class PaymentController {
   constructor(private readonly paymentService: PaymentService) {}
 
   @Post('subscribe')
-  async subscribe(@Body() body: { passengerId: string; planName: string; amount: number }) {
-    return this.paymentService.createSubscription(body.passengerId, body.planName, body.amount);
+  @ApiOperation({ summary: 'Passenger monthly subscription' })
+  async subscribe(@Body() dto: CreateSubscriptionDto) {
+    return this.paymentService.createSubscription(dto.passengerId, dto.planName, dto.amount);
   }
 
   @Post('payout')
-  async payout(@Body() body: { driverId: string; amount: number }) {
-    return this.paymentService.generateDriverPayout(body.driverId, body.amount);
+  @ApiOperation({ summary: 'Driver monthly payout' })
+  async payout(@Body() dto: { driverId: string; amount: number }) {
+    return this.paymentService.generateDriverPayout(dto.driverId, dto.amount);
   }
 
   @Post('wallet/credit')
-  async credit(@Body() body: { walletId: string; amount: number; category: string; description?: string }) {
-    return this.paymentService.creditWallet(body.walletId, body.amount, body.category, body.description);
+  @ApiOperation({ summary: 'Credit user wallet' })
+  async credit(@Body() dto: WalletTransactionDto) {
+    return this.paymentService.creditWallet(dto.walletId, dto.amount, dto.category, dto.description);
   }
 
   @Post('wallet/debit')
-  async debit(@Body() body: { walletId: string; amount: number; category: string; description?: string }) {
-    return this.paymentService.debitWallet(body.walletId, body.amount, body.category, body.description);
+  @ApiOperation({ summary: 'Debit user wallet' })
+  async debit(@Body() dto: WalletTransactionDto) {
+    return this.paymentService.debitWallet(dto.walletId, dto.amount, dto.category, dto.description);
   }
 }

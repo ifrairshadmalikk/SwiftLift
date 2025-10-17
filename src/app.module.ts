@@ -11,6 +11,9 @@ import { RouteSchedulingModule } from './route-scheduling/route-scheduling.modul
 import { BookingModule } from './booking/booking.module';
 import { LiveTrackingModule } from './live-tracking/live-tracking/live-tracking.module';
 import { PaymentModule } from './payment/payment.module';
+import { SupportModule } from './support/support.module';
+import { ReportingModule } from './reporting/reporting.module';
+import { SettingsModule } from './settings/settings.module';
 
 @Module({
   imports: [
@@ -28,6 +31,9 @@ import { PaymentModule } from './payment/payment.module';
     BookingModule,
     LiveTrackingModule,
     PaymentModule,
+    SupportModule,
+    ReportingModule,
+    SettingsModule,
 
   ],
 })
