@@ -8,6 +8,7 @@ import { UserModule } from './users/user.module';
 import { GuardianModule } from './guardian/guardian.module';
 import { TransporterModule } from './transporter/transporter.module';
 import { RouteSchedulingModule } from './route-scheduling/route-scheduling.module'; // 👈 Added import
+import { BookingModule } from './booking/booking.module';
 
 @Module({
   imports: [
@@ -22,6 +23,8 @@ import { RouteSchedulingModule } from './route-scheduling/route-scheduling.modul
     RouteSchedulingModule,
     UserModule,
     AuthModule,
+    BookingModule,
+
   ],
 })
 export class AppModule {}
