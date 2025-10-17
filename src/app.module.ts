@@ -7,6 +7,7 @@ import { AuthModule } from './auth/auth.module';
 import { UserModule } from './users/user.module';
 import { GuardianModule } from './guardian/guardian.module';
 import { TransporterModule } from './transporter/transporter.module';
+import { RouteSchedulingModule } from './route-scheduling/route-scheduling.module'; // 👈 Added import
 
 @Module({
   imports: [
@@ -18,6 +19,7 @@ import { TransporterModule } from './transporter/transporter.module';
     DriverModule,
     GuardianModule,
     TransporterModule,
+    RouteSchedulingModule,
     UserModule,
     AuthModule,
   ],
