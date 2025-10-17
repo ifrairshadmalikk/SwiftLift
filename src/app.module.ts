@@ -9,6 +9,7 @@ import { GuardianModule } from './guardian/guardian.module';
 import { TransporterModule } from './transporter/transporter.module';
 import { RouteSchedulingModule } from './route-scheduling/route-scheduling.module'; // 👈 Added import
 import { BookingModule } from './booking/booking.module';
+import { LiveTrackingModule } from './live-tracking/live-tracking/live-tracking.module';
 
 @Module({
   imports: [
@@ -24,6 +25,7 @@ import { BookingModule } from './booking/booking.module';
     UserModule,
     AuthModule,
     BookingModule,
+    LiveTrackingModule,
 
   ],
 })
